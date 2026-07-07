@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Docs-first rule
+
+Before generating or editing any code, ALWAYS check the `/docs` directory first for a relevant doc file (e.g. `docs/ui.md` for UI work) and follow its standards. If a relevant doc exists, it takes precedence over general defaults or assumptions.
+
 ## Project state
 
 This is a Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS v4 project, currently at the unmodified `create-next-app` scaffold stage — no application-specific code, routes, or tests exist yet beyond the default `src/app/page.tsx` / `layout.tsx`.
