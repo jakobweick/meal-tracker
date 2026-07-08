@@ -128,9 +128,10 @@ export function DashboardClient({ meals }: { meals: Meal[] }) {
             </p>
           ) : (
             mealsForDate.map((meal) => (
-              <div
+              <Link
                 key={meal.id}
-                className="flex items-center justify-between rounded-md border p-3"
+                href={`/dashboard/meals/${meal.id}`}
+                className="flex items-center justify-between rounded-md border p-3 transition-colors hover:bg-accent"
               >
                 <div className="flex flex-col">
                   <span className="font-medium">{meal.name}</span>
@@ -139,7 +140,7 @@ export function DashboardClient({ meals }: { meals: Meal[] }) {
                   </span>
                 </div>
                 <Badge variant="secondary">{mealCalories(meal)} kcal</Badge>
-              </div>
+              </Link>
             ))
           )}
         </CardContent>
