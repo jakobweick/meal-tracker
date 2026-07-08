@@ -6,7 +6,7 @@ import { createMeal } from "@/data/meals";
 
 const createMealSchema = z.object({
   name: z.string().trim().min(1).max(200),
-  eatenAt: z.date(),
+  eatenAt: z.date().refine((d) => !isNaN(d.getTime()), "Invalid date"),
 });
 
 export async function addMeal(input: { name: string; eatenAt: Date }) {
